@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
   headerTitle: {
     fontWeight: 700,
     fontSize: 24,
@@ -18,7 +18,7 @@ const useStyle = makeStyles({
 });
 
 function Header() {
-  const classes = useStyle();
+  const classes = useStyles();
 
   return (
     <div data-cy="header-background" className={classes.headerBackground}>

@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
   title: {
     fontWeight: 700,
     fontSize: 36,
@@ -9,7 +9,7 @@ const useStyle = makeStyles({
 });
 
 function ActivityTitle() {
-  const classes = useStyle();
+  const classes = useStyles();
 
   return <div className={classes.title}>Activity</div>;
 }

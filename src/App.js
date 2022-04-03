@@ -1,4 +1,4 @@
-import { formatMs, Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import ActivityTitle from "./components/ActivityTitle";
 import AddButton from "./components/AddButton";
 import Header from "./components/Header";
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import ActivityItem from "./components/ActivityItem";
 import { formatDate } from "./helper/formatDate";
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
   container: {
     maxWidth: 900,
     width: "100%",
@@ -19,11 +19,11 @@ const useStyle = makeStyles({
 });
 
 function App() {
-  const classes = useStyle();
+  const classes = useStyles();
   const [listActivity, setListActivity] = useState([]);
 
   useEffect(() => {
-    fetch("https://todo.api.devcode.gethired.id/activity-groups?email=haikal%2B1%40skyshi.io")
+    fetch("https://todo.api.devcode.gethired.id/activity-groups?email=ulfah%2B1%40skyshi.io")
       .then((res) => res.json())
       .then((res) => {
         setListActivity(res.data);
@@ -41,15 +41,13 @@ function App() {
         </Grid>
 
         <Grid container spacing={2}>
-          {/* <pre>{JSON.stringify(listActivity, null, 2)}</pre> */}
-
           {listActivity.map((item) => (
             <Grid item xs={12} sm={6} md={3}>
               <ActivityItem title={item.title} created={formatDate(item.created_at)} />
             </Grid>
           ))}
         </Grid>
-        {listActivity.length === 0 && <img src={ActivityEmptyState} alt="empty-state" />}
+        {listActivity.length === 0 && <img src={ActivityEmptyState} alt="empty state" />}
       </div>
     </div>
   );

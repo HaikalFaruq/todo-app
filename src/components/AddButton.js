@@ -1,6 +1,6 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
   button: {
     background: "#16ABF8",
     borderRadius: 45,
@@ -13,7 +13,7 @@ const useStyle = makeStyles({
 });
 
 function AddButton() {
-  const classes = useStyle();
+  const classes = useStyles();
 
   return <button className={classes.button}>+ Tambah</button>;
 }

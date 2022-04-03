@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { ReactComponent as DeleteIcon } from "../assets/activity-item-delete-button.svg";
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
   root: {
     width: "180px",
     height: "180px",
@@ -24,7 +24,7 @@ const useStyle = makeStyles({
 });
 
 function ActivityItem({ title, created }) {
-  const classes = useStyle();
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
